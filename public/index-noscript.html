@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html lang="en">
+   <head>
+      <title>"Burger Shop"</title>
+      <meta charset="utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css">
+   </head>
+   <body>
+      <main>
+         <header>
+            <h1>Welcome to Burger Shop</h1>
+            <h4>Amazing burgers!</h4>
+            <img src="img/header.jpg" alt="header" class="head">
+         </header>
+         <section class="selectburger">
+         <h2>
+            Select burger:
+        </h2>
+            <div class="wrapper">
+            <div class="burgers">
+            <div class="box a">
+               <figure>
+                  <figcaption>Cheese Burger</figcaption>
+                  <img src="img/cheeseburger-11.jpg" alt="Cheeseburger" width="160" height="150">
+                  <ul>
+                     <li> Burger with ___ </li>
+                     <li> Burger with ___ </li>
+                  </ul>
+               </figure>
+            </div>
+            <div class="box b">
+               <figure>
+                  <figcaption>Chicken Burger</figcaption>
+                  <img src="img/Chickenburger-1.jpg" alt="Chickenburger" width="150" height="160">
+                  <ul>
+                     <li> Chicken burger</li>
+                     <li> Free from: <span id="ingredients">gluten</span></li>
+                  </ul>
+               </figure>
+            </div>
+            <div class="box c">
+               <figure>
+                  <figcaption>Halloumi Burger</figcaption>
+                  <img src="img/halloumiburger.jpg" alt="Halloumiburger" width="180" height="150">
+                  <ul>
+                     <li> Vegetarian burger</li>
+                     <li> Free from: <span id="ingredients">Meat, gluten</span></li>
+                  </ul>
+               </figure>
+            </div>
+         </div>
+         </div>
+         <main>
+            <section class="contact">
+               <form></form>
+               <h3>Costumer information</h3>
+               <p>Please provide necessary information for delivery</p>
+               <h4>Delevery information</h4>
+               <p>
+                  <label for="firstname">Firstname</label><br>
+                  <input type="text" id="firstname" name="fn" required="required" placeholder="First name">
+               </p>
+               <p>
+                  <label for="lastname">Lastname</label><br>
+                  <input type="text" id="lastname" name="ln" placeholder="Last name">
+               </p>
+               <p>
+                  <label for="email">E-mail address</label><br>
+                  <input type="email" id="email" name="em" required="required" placeholder="E-mail address">
+               </p>
+               <p>
+                  <label for="Street">Street address</label><br>
+                  <input type="text" id="Street_adress" name="sa" required="required" placeholder="Street address">
+               </p>
+               <p>
+                  <label for="City">City</label><br>
+                  <input type="text" id="City" name="ci" required="required" placeholder="City">
+               </p>
+               <p>
+                  <label for="Payment">Payment options</label>
+                  <select id="payment" name="pm">
+                     <option>Credit cart</option>
+                     <option>Debit card</option>
+                     <option>Apple pay</option>
+                     <option>Bank transfer</option>
+                  </select>
+               </p>
+               <p>
+                  <label for="Male">Man</label>
+                  <input type="radio" id="Male" name="Sex" value="Male">
+                  <label for="Female">Female</label>
+                  <input type="radio" id="Female" name="Sex" value="Female">
+                  <label for="Do not want to provide">Do not want to provide</label>
+                  <input type="radio" id="Do not want to provide" name="Sex" value="Do not want to provide">
+               </p>
+               <button type="submit">
+               <img src="img/sendd.jpg" style="width: 20px;">
+               Send Info
+               </button>
+               </form>
+            </section>
+         </main>
+         <hr>
+      </main>
+      <footer>
+        <p>© 2023, Burger Shop Ink.</p>
+      </footer>
+   </body>
+</html>

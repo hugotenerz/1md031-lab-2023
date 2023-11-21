@@ -1,0 +1,24 @@
+
+[
+    {
+      "name": "Cheese Burger",
+      "contents1": "Burger with good meat",
+      "all": "Meat, Gluten",
+      "url": "img/cheeseburger-11.jpg"
+    },
+
+    {
+        "name": "Chicken Burger",
+        "contents1": "Delicious chicken burger",
+        "all": "Gluten",
+        "url": "img/Chickenburger-1.jpg"
+    },
+
+    {
+        "name": "Halloumi Burger",
+        "contents1": "Vegetarian burger",
+        "all": "Gluten",
+        "url": "img/halloumiburger.jpg"
+    }
+  ]
+

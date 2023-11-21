@@ -2,10 +2,20 @@
     <div id="orders">
       <div id="orderList">
         <div v-for="(order, key) in orders" v-bind:key="'order'+key">
-          #{{ key }}: {{ order.orderItems.join(", ") }}
+          #{{ key }}:
+          <ul>
+            <li v-if="order.orderItems['Cheese Burger']" >Cheese Burger: {{ order.orderItems ["Cheese Burger"]}}</li>
+            <li v-if="order.orderItems['Chicken Burger']" >Chicken Burger: {{ order.orderItems ["Chicken Burger"]}}</li>
+            <li v-if="order.orderItems['Halloumi Burger']" >Halloumi Burger: {{ order.orderItems ["Halloumi Burger"]}}</li>
+          </ul>
+          {{order.costumerInfo["fn"]}} {{order.costumerInfo["ln"]}}
+          <hr>
+          ({{order.costumerInfo["em"]}}, {{order.costumerInfo["sex"]}}, {{order.costumerInfo["pm"]}})
         </div>
         <button v-on:click="clearQueue">Clear Queue</button>
       </div>
+
+
       <div id="dots" v-bind:style="{ background: 'url(' + require('../../public/img/polacks.jpg')+ ')' }">
           <div v-for="(order, key) in orders" v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}" v-bind:key="'dots' + key">
             {{ key }}
@@ -21,13 +31,16 @@
     name: 'DispatcherView',
     data: function () {
       return {
-        orders: null
+        orders: {}
+
       }
     },
+
     created: function () {
       socket.on('currentQueue', data =>
         this.orders = data.orders);
     },
+
     methods: {
       clearQueue: function () {
         socket.emit('clearQueue');
